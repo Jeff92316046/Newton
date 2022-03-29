@@ -9,13 +9,14 @@ def function(Size, array, x):
     return sum
 
 
-Size = int(input())
+Size = int(input("輸入最高次數:"))
+Size += 1
 F = []
 f = []
-X = [4]
+X = [-4]
 for i in range(Size):
-    i = int(input())
-    F.append(i)
+    temp = int(input("%d次方之係數:" % (Size-i-1)))
+    F.append(temp)
 for i in range(Size):
     f.append(F[i]*(Size-i-1))
 for i in range(100):
@@ -23,3 +24,4 @@ for i in range(100):
     print(i+1, X[i+1])
     if(function(Size, F, X[i]) == 0):
         break
+a = input()
