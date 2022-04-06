@@ -1,3 +1,11 @@
+import imp
+
+
+import decimal
+
+import numpy
+
+
 def function(Size, array, x):
     sum = 0
     temp = 1
@@ -23,9 +31,10 @@ def main():
             f.append(F[i]*(Size-i-1))
         for i in range(100):
             X.append(X[i] - (function(Size, F, X[i])/function(Size-1, f, X[i])))
-            print(i+1, X[i+1])
             if(function(Size, F, X[i]) == 0):
                 break
+        print("四捨五入到小數第四位:%s" % (numpy.round((X[-1]), 4)))
+        print(X[-1])
         a = int(input("如果想重新請輸入1,結束輸入2\n"))
         if a == 1:
             continue
