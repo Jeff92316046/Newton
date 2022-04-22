@@ -34,7 +34,6 @@ def main():
             if(function(Size, F, X[i]) == 0):
                 break
         print("四捨五入到小數第四位:%s" % (numpy.round((X[-1]), 4)))
-        print(X[-1])
         a = int(input("如果想重新請輸入1,結束輸入2\n"))
         if a == 1:
             continue
